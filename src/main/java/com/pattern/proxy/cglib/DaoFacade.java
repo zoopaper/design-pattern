@@ -1,4 +1,4 @@
-package com.patten.proxy.cglib;
+package com.pattern.proxy.cglib;
 
 /**
  * @author krisjin
