@@ -12,14 +12,14 @@ public class NorthProxy implements InvocationHandler {
 	}
 
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-
+		String result;
 		System.out.println("开始代理获取商品并重新定价");
-		
-		method.invoke(target, args);
+
+		result = (String) method.invoke(target, args);
 
 		System.out.println("结束代理获取商品并重新定价");
 
-		return null;
+		return result;
 	}
 
 }

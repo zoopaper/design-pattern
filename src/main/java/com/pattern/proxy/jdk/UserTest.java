@@ -10,9 +10,10 @@ public class UserTest {
 
 		NorthProxy proxy = new NorthProxy(europe);
 
-		AirProduct ap = (AirProduct) Proxy.newProxyInstance(europe.getClass().getClassLoader(), europe.getClass()
-				.getInterfaces(), proxy);
+		AirProduct ap = (AirProduct) Proxy.newProxyInstance(europe.getClass().getClassLoader(), europe.getClass().getInterfaces(), proxy);
 
-		ap.sell();
+		String ret = ap.sell();
+		
+		System.out.println(ret);
 	}
 }
