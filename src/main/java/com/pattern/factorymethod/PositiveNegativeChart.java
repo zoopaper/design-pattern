@@ -1,14 +1,15 @@
 package com.pattern.factorymethod;
 
 /**
- * @author kris
- * 
+ * 正负面趋势图
+ *
+ * @author krisjin
  */
-public class PositiveNegativeChart implements Chart {
-	
-	
-	public void generate() {
-		System.out.println("generate positive negative chart....");
-	}
+public class PositiveNegativeChart implements IChart {
+
+
+    public void generate() {
+        System.out.println("generate positive negative chart....");
+    }
 
 }

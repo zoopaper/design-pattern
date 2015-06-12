@@ -1,19 +1,18 @@
 package com.pattern.factorymethod;
 
+
 /**
  * @author kris
- * 
  */
 public class Main {
 
-	public static void main(String[] args) {
-		ChartFactory cf = new MediaChart();
+    public static void main(String[] args) {
 
-		Chart chart = cf.create(1);
-		chart.generate();
+        AbstractChartFactory cf = new MediaChartFactory();
 
-		chart = cf.create(3);
-		chart.generate();
-	}
+        IChart newsQuantityTrendsChart = cf.create(NewsQuantityTrendsChart.class);
+        newsQuantityTrendsChart.generate();
+
+    }
 
 }

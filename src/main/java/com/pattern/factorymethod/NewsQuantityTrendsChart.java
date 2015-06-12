@@ -1,10 +1,10 @@
 package com.pattern.factorymethod;
 
 /**
- * @author kris
- * 
+ * 新闻数量趋势图
+ * @author krisjin
  */
-public class NewsQuantityTrendsChart implements Chart {
+public class NewsQuantityTrendsChart implements IChart {
 
 
 	@Override
