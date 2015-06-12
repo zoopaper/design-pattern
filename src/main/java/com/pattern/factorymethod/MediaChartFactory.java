@@ -5,11 +5,10 @@ package com.pattern.factorymethod;
  *
  * @author krisjin
  */
-public class MediaChartFactory extends AbstractChartFactory {
+public class MediaChartFactory {
 
 
-    @Override
-    public <T extends IChart> T create(Class<T> clazz) {
+    public static <T extends IChart> T create(Class<T> clazz) {
         IChart chart = null;
         try {
             chart = (IChart) Class.forName(clazz.getName()).newInstance();

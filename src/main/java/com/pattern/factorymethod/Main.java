@@ -8,9 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        AbstractChartFactory cf = new MediaChartFactory();
 
-        IChart newsQuantityTrendsChart = cf.create(NewsQuantityTrendsChart.class);
+        IChart newsQuantityTrendsChart = MediaChartFactory.create(NewsQuantityTrendsChart.class);
         newsQuantityTrendsChart.generate();
 
     }
