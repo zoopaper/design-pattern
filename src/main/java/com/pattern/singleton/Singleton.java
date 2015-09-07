@@ -1,6 +1,7 @@
 package com.pattern.singleton;
 
 /**
+ * 内部类创建实例
  * <p/>
  * User : krisibm@163.com
  * Date: 2015/9/7

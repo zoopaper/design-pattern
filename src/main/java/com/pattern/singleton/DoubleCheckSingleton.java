@@ -15,7 +15,7 @@ public class DoubleCheckSingleton {
     }
 
 
-    public DoubleCheckSingleton getInstance() {
+    public static DoubleCheckSingleton getInstance() {
 
         if (doubleCheckSingleton == null) {
             synchronized (DoubleCheckSingleton.class) {
