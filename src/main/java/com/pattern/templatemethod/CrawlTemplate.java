@@ -1,7 +1,7 @@
 package com.pattern.templatemethod;
 
 /**
- * 模板类
+ * 模板类,封装数据抓取过程的逻辑控制
  * <p/>
  * User : krisibm@163.com
  * Date: 2015/8/25
