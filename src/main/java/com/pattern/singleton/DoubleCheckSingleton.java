@@ -8,7 +8,7 @@ package com.pattern.singleton;
  * Time: 9:29
  */
 public class DoubleCheckSingleton {
-
+//    private byte[] gcObj = new byte[6 * 1024 * 1024];
     private static volatile DoubleCheckSingleton doubleCheckSingleton = null;
 
     private DoubleCheckSingleton() {
