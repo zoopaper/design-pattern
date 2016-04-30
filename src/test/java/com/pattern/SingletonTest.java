@@ -1,4 +1,6 @@
-package com.pattern.singleton;
+package com.pattern;
+
+import com.pattern.singleton.DoubleCheckSingleton;
 
 /**
  * -verbose:gc -Xms50M -Xmx50M
@@ -17,8 +19,8 @@ public class SingletonTest {
         }
 
     }
+    static class Obj {
+        private byte[] obj = new byte[3 * 1024 * 1024];
+    }
 }
 
-class Obj {
-    private byte[] obj = new byte[3 * 1024 * 1024];
-}
