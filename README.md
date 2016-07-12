@@ -1,2 +1,2 @@
-# java design pattern
-java design pattern
+## 设计原则
+1. 把变化的部分取出来并封装起来，便于以后可以轻易的改动或扩充此部分，而不影响不需要变化的其它部分。
