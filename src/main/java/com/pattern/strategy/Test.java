@@ -7,7 +7,7 @@ import java.util.List;
  * User: shijingui
  * Date: 2016/7/13
  */
-public class Main {
+public class Test {
     public static void main(String[] args) {
         SortContext sortContext = new SortContext();
         sortContext.setSortStrategy(new BubbleSort());
