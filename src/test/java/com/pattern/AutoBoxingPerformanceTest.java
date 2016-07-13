@@ -17,9 +17,7 @@ public class AutoBoxingPerformanceTest {
             sum += 1;
         }
         long endTime = System.currentTimeMillis();
-
         System.out.println("cost execute time:" + (endTime - startTime) / 1000 + "s");
-
     }
 
     @Test
@@ -28,11 +26,8 @@ public class AutoBoxingPerformanceTest {
         long startTime = System.currentTimeMillis();
         for (long i = 0; i < Integer.MAX_VALUE; i++) {
             sum += 1;
-
         }
         long endTime = System.currentTimeMillis();
-
         System.out.println("cost execute time:" + (endTime - startTime) / 1000 + "s");
-
     }
 }

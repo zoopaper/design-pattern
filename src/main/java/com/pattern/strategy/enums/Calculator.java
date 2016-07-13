@@ -1,13 +1,7 @@
 package com.pattern.strategy.enums;
 
-/**
- * <p/>
- * User : krisibm@163.com
- * Date: 2015/6/15
- * Time: 14:05
- */
-public enum Calculator {
 
+public enum Calculator {
 
     ADD("+") {
         public int exec(int a, int b) {
