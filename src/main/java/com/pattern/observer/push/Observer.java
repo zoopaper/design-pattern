@@ -7,7 +7,6 @@ package com.pattern.observer.push;
  */
 public interface Observer {
 	
-	
-	public void receive(String json);
+	public void update(String json);
 
 }

@@ -2,18 +2,16 @@ package com.pattern.observer.push;
 
 public class Test {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Subject subject = new PublishSubject();
+        Subject subject = new NewsSubject();
+        Observer observer1 = new CompanyObserver();
+        Observer observer2 = new PersonObserver();
 
-		Observer obs = new ConfigSubObserver(1);
-		Observer obs2 = new ConfigSubObserver(2);
+        subject.register(observer1);
+        subject.register(observer2);
+        subject.notify("您订阅的报纸已经寄出!");
 
-		subject.register(obs);
-		subject.register(obs2);
-
-		subject.notifyObserver("羊年大吉!");
-
-	}
+    }
 
 }
