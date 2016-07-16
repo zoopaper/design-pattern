@@ -21,6 +21,7 @@ public abstract class Subject {
         observerList.remove(observer);
     }
 
+
     public abstract void notify(String json);
 
 }

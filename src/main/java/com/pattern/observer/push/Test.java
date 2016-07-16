@@ -12,6 +12,10 @@ public class Test {
         subject.register(observer2);
         subject.notify("您订阅的报纸已经寄出!");
 
+        subject.remove(observer1);
+        subject.remove(observer2);
+        subject.notify("您订阅的报纸已经寄出!");
+
     }
 
 }
