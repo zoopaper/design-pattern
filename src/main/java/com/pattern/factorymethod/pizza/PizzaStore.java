@@ -18,5 +18,11 @@ public abstract class PizzaStore {
         return pizza;
     }
 
+    /**
+     * 抽象的工厂方法，创建披萨
+     *
+     * @param type
+     * @return
+     */
     protected abstract Pizza createPizza(String type);
 }
