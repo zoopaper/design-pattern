@@ -38,17 +38,21 @@ public abstract class Pizza {
     /**
      * 烘焙
      */
-    abstract void bake();
+    void bake() {
+    }
 
     /**
      * 切
      */
-    abstract void cut();
+    void cut() {
+    }
+
 
     /**
      * 装盒
      */
-    abstract void box();
+    void box() {
+    }
 
 
 }
