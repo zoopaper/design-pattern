@@ -7,7 +7,7 @@ package com.pattern.decorator.beverage;
  * Time: 上午6:24
  */
 public abstract class Beverage {
-    String description = "Unknow Beverage";
+    String description = "UnKnow Beverage";
 
     public String getDescription() {
         return description;
