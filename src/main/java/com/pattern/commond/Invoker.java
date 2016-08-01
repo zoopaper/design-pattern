@@ -1,9 +1,22 @@
 package com.pattern.commond;
 
-/**请求者角色
+/**
+ * 请求者角色
  * 负责调用命令对象执行请求，相关的方法叫做行动方法
  * User: shijingui
  * Date: 2016/8/2
  */
 public class Invoker {
+    private Command command;
+
+    private Invoker(Command command) {
+        this.command = command;
+    }
+
+    /**
+     * 命令执行动作方法
+     */
+    public void action() {
+        command.execute();
+    }
 }
