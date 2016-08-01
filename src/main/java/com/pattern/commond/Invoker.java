@@ -9,7 +9,7 @@ package com.pattern.commond;
 public class Invoker {
     private Command command;
 
-    private Invoker(Command command) {
+    public Invoker(Command command) {
         this.command = command;
     }
 
