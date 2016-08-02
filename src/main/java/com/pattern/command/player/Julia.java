@@ -21,6 +21,23 @@ public class Julia {
         keypad.play();
         keypad.stop();
         keypad.rewwind();
+        System.out.println("-------------------------------------------分割线-------------------------------------------");
+        macroTest();
+    }
 
+    public static void macroTest() {
+        Command playCmd = new PlayCommand(audioPlayer);
+        Command stopCmd = new StopCommand(audioPlayer);
+        Command rewindCmd = new RewindCommand(audioPlayer);
+        MacroCommand macro = new MacroAudioCommand();
+
+        macro.add(playCmd);
+        macro.add(stopCmd);
+        macro.remove(stopCmd);
+        macro.add(rewindCmd);
+        macro.add(playCmd);
+        macro.add(stopCmd);
+
+        macro.execute();
     }
 }
