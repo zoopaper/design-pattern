@@ -1,4 +1,4 @@
-package com.pattern.commond;
+package com.pattern.command;
 
 /**
  * 请求者角色

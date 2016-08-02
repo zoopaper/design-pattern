@@ -1,4 +1,4 @@
-package com.pattern.commond;
+package com.pattern.command;
 
 /**
  * 命令角色
