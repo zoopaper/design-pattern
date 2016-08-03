@@ -20,7 +20,7 @@ public class Julia {
 
         keypad.play();
         keypad.stop();
-        keypad.rewwind();
+        keypad.rewind();
         System.out.println("-------------------------------------------分割线-------------------------------------------");
         macroTest();
     }
