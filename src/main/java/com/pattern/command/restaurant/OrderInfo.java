@@ -4,10 +4,11 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
+ * 菜品订单信息
  * User: shijingui
- * Date: 2016/8/4
+ * Date: 2016/8/9
  */
-public class Order {
+public class OrderInfo {
     private Map<Integer, String> foodMap = new ConcurrentHashMap<Integer, String>();
 
     public void addFood(Integer number, String name) {
@@ -21,5 +22,4 @@ public class Order {
     public Map getFoodMap() {
         return foodMap;
     }
-
 }
