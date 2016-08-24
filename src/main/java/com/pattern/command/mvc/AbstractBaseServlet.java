@@ -1,5 +1,7 @@
 package com.pattern.command.mvc;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +13,10 @@ import java.util.List;
 public abstract class AbstractBaseServlet extends HttpServlet {
     private List<Controller> controllerList;
 
-    public void initConfig() {
 
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+            
     }
 
     public void initHandler() {

@@ -13,7 +13,7 @@ import java.io.IOException;
 public class DispatcherServlet extends AbstractBaseServlet {
     HandlerCommand handlerCommand;
     public DispatcherServlet() {
-        initConfig();
+//        initConfig();
         initHandler();
         handlerCommand = new SimpleUrlHandlerCommand();
     }
