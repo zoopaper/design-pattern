@@ -9,7 +9,6 @@ package com.pattern.templatemethod;
  */
 public abstract class CrawlTemplate {
 
-
     protected abstract void download();
 
     protected abstract void pipeline();
