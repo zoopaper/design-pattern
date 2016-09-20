@@ -5,11 +5,8 @@ package com.pattern.factorymethod;
  *
  * @author kris
  */
-public interface IChart {
+public interface Chart {
 
-    /**
-     *
-     */
     public void generate();
 
 }

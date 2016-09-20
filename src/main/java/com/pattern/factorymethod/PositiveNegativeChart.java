@@ -5,11 +5,11 @@ package com.pattern.factorymethod;
  *
  * @author krisjin
  */
-public class PositiveNegativeChart implements IChart {
+public class PositiveNegativeChart implements Chart {
 
 
     public void generate() {
-        System.out.println("generate positive negative chart....");
+        System.out.println("新闻正负面趋势图....");
     }
 
 }

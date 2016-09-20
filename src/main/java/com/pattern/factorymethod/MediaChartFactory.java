@@ -5,20 +5,20 @@ package com.pattern.factorymethod;
  *
  * @author krisjin
  */
-public class MediaChartFactory {
+public class MediaChartFactory implements ChartFactory {
 
 
-    public static <T extends IChart> T create(Class<T> clazz) {
-        IChart chart = null;
-        try {
-            chart = (IChart) Class.forName(clazz.getName()).newInstance();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+    @Override
+    public Chart createChart(ChartEnum chartEnum) {
+        Chart chart = null;
+        switch (chartEnum) {
+            case NewsQuantityTrendsChart:
+                chart = new NewsQuantityTrendsChart();
+                break;
+            case PositiveNegativeChart:
+                chart = new PositiveNegativeChart();
+                break;
         }
-        return (T) chart;
+        return chart;
     }
 }
