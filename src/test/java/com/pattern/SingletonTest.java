@@ -1,6 +1,6 @@
 package com.pattern;
 
-import com.pattern.singleton.DoubleCheckSingleton;
+import com.pattern.singleton.LazyLoadDoubleCheckSingleton;
 
 /**
  * -verbose:gc -Xms50M -Xmx50M
@@ -13,7 +13,7 @@ public class SingletonTest {
 
     public static void main(String[] args) {
 
-        DoubleCheckSingleton.getInstance();
+        LazyLoadDoubleCheckSingleton.getInstance();
         while (true) {
             new Obj();
         }
