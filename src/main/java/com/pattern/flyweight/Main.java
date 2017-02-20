@@ -4,7 +4,7 @@ package com.pattern.flyweight;
  * @author krisjin
  * @date 2015年1月26日
  */
-public class Test {
+public class Main {
 	public static void main(String[] args) {
 		ReportManagerFactory rmf = new ReportManagerFactory();
 		
