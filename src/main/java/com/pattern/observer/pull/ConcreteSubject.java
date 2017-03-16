@@ -4,7 +4,7 @@ package com.pattern.observer.pull;
  * @author krisjin
  * @date 2015-1-30
  */
-public class SubjectImpl extends Subject {
+public class ConcreteSubject extends Subject {
 	private String state;
 
 	public void change(String newState) {

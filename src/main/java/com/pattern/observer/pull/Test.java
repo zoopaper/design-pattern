@@ -6,10 +6,10 @@ package com.pattern.observer.pull;
  */
 public class Test { 
 	public static void main(String[] args) {
-		SubjectImpl subject = new SubjectImpl();
+		ConcreteSubject subject = new ConcreteSubject();
 
-		Observer observer = new ConfigObserver(1);
-		Observer observer2 = new ConfigObserver(2);
+		IObserver observer = new ConcreteObserver(1);
+		IObserver observer2 = new ConcreteObserver(2);
 
 		subject.register(observer);
 		subject.register(observer2);
