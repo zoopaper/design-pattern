@@ -1,7 +1,8 @@
 package com.pattern.singleton;
 
 /**
- * 内部类创建实例，维护实例
+ * 内部类创建实例，维护实例.
+ * 使用内部类的方式维护实例，既保证类懒加载的方式，还不用使用synchronized关键字，是一种比较完善的方式。
  * <p/>
  * User : krisibm@163.com
  * Date: 2015/9/7
