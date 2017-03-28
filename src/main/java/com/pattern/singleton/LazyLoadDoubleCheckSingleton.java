@@ -8,16 +8,17 @@ package com.pattern.singleton;
  * Time: 9:29
  */
 public class LazyLoadDoubleCheckSingleton {
-//    private byte[] gcObj = new byte[6 * 1024 * 1024];
+
     private static volatile LazyLoadDoubleCheckSingleton instance = null;
 
     private LazyLoadDoubleCheckSingleton() {
     }
 
     public static LazyLoadDoubleCheckSingleton getInstance() {
-
+        //第一次检查
         if (instance == null) {
             synchronized (LazyLoadDoubleCheckSingleton.class) {
+                //第二次检查
                 if (instance == null) {
                     instance = new LazyLoadDoubleCheckSingleton();
                 }
