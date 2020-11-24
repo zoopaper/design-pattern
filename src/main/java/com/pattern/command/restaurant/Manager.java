@@ -2,7 +2,7 @@ package com.pattern.command.restaurant;
 
 /**
  * 经理
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/9
  */
 public class Manager {

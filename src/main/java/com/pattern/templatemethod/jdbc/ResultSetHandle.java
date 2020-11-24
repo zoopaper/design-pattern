@@ -3,7 +3,7 @@ package com.pattern.templatemethod.jdbc;
 import java.sql.ResultSet;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/9/19
  */
 public interface ResultSetHandle<T> {

@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * 接收者角色，可以是任何一个类
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/4
  */
 public class Chief {

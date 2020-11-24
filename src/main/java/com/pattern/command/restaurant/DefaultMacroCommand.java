@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/9
  */
 public class DefaultMacroCommand implements MacroCommand {

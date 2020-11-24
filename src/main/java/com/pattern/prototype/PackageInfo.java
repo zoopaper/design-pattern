@@ -2,7 +2,7 @@ package com.pattern.prototype;
 
 /**
  * 包裹信息原型
- * User: shijingui
+ * User: krisjin
  * Date: 2016/9/20
  */
 public class PackageInfo implements Cloneable {

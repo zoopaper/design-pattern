@@ -2,7 +2,7 @@ package com.pattern.facade;
 
 /**
  * 外观模式体现了迪米特法则
- * User: shijingui
+ * User: krisjin
  * Date: 2016/9/21
  */
 public class Main {

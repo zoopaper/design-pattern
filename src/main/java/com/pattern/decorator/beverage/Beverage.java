@@ -2,7 +2,7 @@ package com.pattern.decorator.beverage;
 
 /**
  * 饮料超类
- * User: shijingui
+ * User: krisjin
  * Date: 16-7-26
  * Time: 上午6:24
  */

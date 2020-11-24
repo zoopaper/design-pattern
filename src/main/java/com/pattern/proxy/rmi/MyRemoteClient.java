@@ -6,7 +6,7 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/9/17
  */
 public class MyRemoteClient {

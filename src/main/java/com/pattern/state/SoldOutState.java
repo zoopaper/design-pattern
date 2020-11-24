@@ -1,7 +1,7 @@
 package com.pattern.state;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/9/18
  */
 public class SoldOutState implements State {

@@ -1,7 +1,7 @@
 package com.pattern.command.restaurant;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/9
  */
 public interface MacroCommand extends Command {

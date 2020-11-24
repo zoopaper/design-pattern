@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  * 抽象命令对象
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/10
  */
 public abstract class Command {

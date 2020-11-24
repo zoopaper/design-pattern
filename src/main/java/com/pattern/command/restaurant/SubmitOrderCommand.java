@@ -2,7 +2,7 @@ package com.pattern.command.restaurant;
 
 /**
  * 下单命令操作
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/4
  */
 public class SubmitOrderCommand implements Command {

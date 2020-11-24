@@ -2,7 +2,7 @@ package com.pattern.command.player;
 
 /**
  * 录音机(接收者角色)
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/3
  */
 public class AudioPlayer {

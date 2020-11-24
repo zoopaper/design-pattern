@@ -2,7 +2,7 @@ package com.pattern.state;
 
 /**
  * 没有投入25分钱状态
- * User: shijingui
+ * User: krisjin
  * Date: 2016/9/18
  */
 public class NoQuarterState implements State {

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/3
  */
 public class FunctionButtonSettingWindow {

@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/9/19
  */
 public class SimpleJdbcQueryTemplate {

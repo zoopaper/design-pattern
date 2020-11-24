@@ -6,7 +6,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/9/17
  */
 public class Client {

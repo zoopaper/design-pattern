@@ -1,7 +1,7 @@
 package com.pattern.observer.push;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/7/16
  */
 public class PersonObserver implements Observer {

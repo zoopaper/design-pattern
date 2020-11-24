@@ -7,7 +7,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/9/19
  */
 public class JavassistTest {

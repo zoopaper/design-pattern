@@ -2,7 +2,7 @@ package com.pattern.observer.weather;
 
 /**
  * 当前天气情况布告板
- * User: shijingui
+ * User: krisjin
  * Date: 2016/7/16
  */
 public class CurrentConditionsDisplay implements Observer, DisplayElement {

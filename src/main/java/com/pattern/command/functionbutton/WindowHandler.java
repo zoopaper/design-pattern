@@ -2,7 +2,7 @@ package com.pattern.command.functionbutton;
 
 /**
  * 窗口最小化接收者
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/3
  */
 public class WindowHandler {

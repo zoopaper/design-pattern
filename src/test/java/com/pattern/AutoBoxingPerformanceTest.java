@@ -4,7 +4,7 @@ import org.junit.Test;
 
 /**
  * 要优先使用基本类型而不是装箱基本类型，要当心无意识的自动装箱。
- * User: shijingui
+ * User: krisjin
  * Date: 2016/5/1
  */
 public class AutoBoxingPerformanceTest {

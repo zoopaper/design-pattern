@@ -2,7 +2,7 @@ package com.pattern.command.restaurant;
 
 /**
  * 取消下单
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/9
  */
 public class CancelOrderCommand implements Command {

@@ -3,7 +3,7 @@ package com.pattern.command.mvc;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/9
  */
 public class DefaultAnnotationHandlerCommand implements HandlerCommand {

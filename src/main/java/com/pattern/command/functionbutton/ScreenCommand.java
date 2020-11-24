@@ -1,7 +1,7 @@
 package com.pattern.command.functionbutton;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/4
  */
 public class ScreenCommand extends Command {

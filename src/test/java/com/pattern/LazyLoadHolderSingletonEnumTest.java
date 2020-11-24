@@ -4,7 +4,7 @@ import com.pattern.singleton.SingletonEnum;
 import org.junit.Test;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/4/30
  */
 public class LazyLoadHolderSingletonEnumTest {

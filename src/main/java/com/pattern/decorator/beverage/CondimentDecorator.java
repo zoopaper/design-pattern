@@ -2,7 +2,7 @@ package com.pattern.decorator.beverage;
 
 /**
  * 饮料装饰者，继承自Berevage
- * User: shijingui
+ * User: krisjin
  * Date: 16-7-26
  * Time: 上午6:28
  */

@@ -2,7 +2,7 @@ package com.pattern.command.player;
 
 /**
  * 键盘(请求者角色),封装了请求命令
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/3
  */
 public class Keypad {

@@ -3,7 +3,7 @@ package com.pattern.proxy.rmi;
 import java.rmi.RemoteException;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/9/17
  */
 public class BusinessImpl implements Business {

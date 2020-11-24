@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/3
  */
 public class MacroAudioCommand implements MacroCommand {

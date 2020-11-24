@@ -1,7 +1,7 @@
 package com.pattern.singleton;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/4/30
  */
 public enum SingletonEnum {

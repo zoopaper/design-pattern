@@ -2,7 +2,7 @@ package com.pattern.command.restaurant;
 
 /**
  * 服务生（请求者负责调用命令对象）
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/4
  */
 public class Waiter {

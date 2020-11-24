@@ -2,7 +2,7 @@ package com.pattern.factorymethod.pizza;
 
 /**
  * 披萨店
- * User: shijingui
+ * User: krisjin
  * Date: 2016/7/27
  */
 public abstract class PizzaStore {

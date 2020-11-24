@@ -15,7 +15,7 @@ import java.util.Map;
 
 /**
  * 请求调用分发器
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/9
  */
 public class DispatcherServlet extends AbstractBaseServlet {

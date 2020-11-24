@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * 披萨产品
- * User: shijingui
+ * User: krisjin
  * Date: 2016/7/27
  */
 public abstract class Pizza {

@@ -6,7 +6,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/9/17
  */
 public class MyRemoteImpl extends UnicastRemoteObject implements MyRemote {

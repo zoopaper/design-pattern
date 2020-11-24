@@ -5,7 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 菜品订单信息
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/9
  */
 public class OrderInfo {

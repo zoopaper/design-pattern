@@ -1,7 +1,7 @@
 package com.pattern.prototype;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/9/20
  */
 public class Main {

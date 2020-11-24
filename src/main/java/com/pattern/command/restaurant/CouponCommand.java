@@ -2,7 +2,7 @@ package com.pattern.command.restaurant;
 
 /**
  * 优惠券命令
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/9
  */
 public class CouponCommand implements Command {

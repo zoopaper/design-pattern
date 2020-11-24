@@ -1,7 +1,7 @@
 package com.pattern.command.functionbutton;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/3
  */
 public class MinimizeCommand extends Command {

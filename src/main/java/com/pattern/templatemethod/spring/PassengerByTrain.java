@@ -1,7 +1,7 @@
 package com.pattern.templatemethod.spring;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/9/19
  */
 public class PassengerByTrain extends HappyPeople {

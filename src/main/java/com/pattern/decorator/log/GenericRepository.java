@@ -3,7 +3,7 @@ package com.pattern.decorator.log;
 import java.io.Serializable;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/9/20
  */
 public interface GenericRepository<T, ID extends Serializable> {

@@ -2,7 +2,7 @@ package com.pattern.singleton;
 
 /**
  * 线程安全，对于static属性的初始化只能由一个线程执行且仅一次
- * User: shijingui
+ * User: krisjin
  * Date: 2016/9/19
  */
 public class SimpleSingleton {

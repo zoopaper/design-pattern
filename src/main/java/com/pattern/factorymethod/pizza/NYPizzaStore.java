@@ -1,7 +1,7 @@
 package com.pattern.factorymethod.pizza;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/7/27
  */
 public class NYPizzaStore extends PizzaStore {

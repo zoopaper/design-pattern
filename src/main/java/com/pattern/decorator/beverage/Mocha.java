@@ -2,7 +2,7 @@ package com.pattern.decorator.beverage;
 
 /**
  * 摩卡装饰者
- * User: shijingui
+ * User: krisjin
  * Date: 16-7-26
  * Time: 上午6:40
  */

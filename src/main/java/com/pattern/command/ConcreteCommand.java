@@ -1,7 +1,7 @@
 package com.pattern.command;
 
 /**
- * User: shijingui
+ * User: krisjin
  * Date: 2016/8/2
  */
 public class ConcreteCommand implements Command {
