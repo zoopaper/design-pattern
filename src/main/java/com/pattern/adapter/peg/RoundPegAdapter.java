@@ -6,9 +6,14 @@ package com.pattern.adapter.peg;
  * Date: 2016/9/21
  */
 public class RoundPegAdapter implements Peg {
-    private IRoundPeg roundPeg;
+    private RoundPeg roundPeg;
 
-    public RoundPegAdapter(IRoundPeg roundPeg) {
+    /**
+     * 构造函数注入
+     *
+     * @param roundPeg
+     */
+    public RoundPegAdapter(RoundPeg roundPeg) {
         this.roundPeg = roundPeg;
     }
 
@@ -16,4 +21,5 @@ public class RoundPegAdapter implements Peg {
     public void insertIntoHole() {
         roundPeg.insertIntoRoundHole();
     }
+
 }
