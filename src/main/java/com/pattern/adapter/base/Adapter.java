@@ -15,7 +15,7 @@ package com.pattern.adapter.base;
  * @author krisjin
  * @date 2020/11/25
  */
-public class Adapter implements Target {
+public class Adapter extends Adaptee implements Target {
     private Adaptee adaptee;
 
     /**
