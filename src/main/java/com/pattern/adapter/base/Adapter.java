@@ -29,6 +29,6 @@ public class Adapter extends Adaptee implements Target {
 
     @Override
     public void pull() {
-        System.out.println("Adaptee适配者执行...");
+        adaptee.push();
     }
 }

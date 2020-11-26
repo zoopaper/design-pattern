@@ -1,0 +1,33 @@
+@startuml
+
+package org.apache.spark.ui <<Frame>>{
+    abstract class WebUIPage
+    abstract class WebUITab
+    abstract class SparkUITab extends WebUITab
+}
+
+package org.apache.hive.service.cli <<Frame>> {
+    class SessionManager
+    class OperationManager
+}
+
+package org.apache.spark.sql.hive.thriftserver <<Frame>>{
+    class SparkSQLSessionManager extends SessionManager
+    class SparkExecuteStatementOperation extends OperationManager
+    class HiveThriftServer2
+    class SparkSQLEnv
+}
+
+package org.apache.spark.sql.hive.thriftserver.ui <<Frame>>{
+    interface SQLEventListener
+    class SQLPage extends WebUIPage
+    class SQLUIListener extends SQLEventListener
+    class SQLTab extends SparkUITab
+}
+
+SparkSQLSessionManager *--"1" SQLEventListener : contains
+HiveThriftServer2 --> SQLTab : create
+SparkSQLEnv --> SQLUIListener : create
+SparkExecuteStatementOperation *--"1" SQLEventListener : contains
+
+@enduml

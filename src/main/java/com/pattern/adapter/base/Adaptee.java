@@ -13,7 +13,7 @@ package com.pattern.adapter.base;
 public class Adaptee {
 
     public void push() {
-        System.err.println(111);
+        System.out.println("Adaptee 适配者执行...");
     }
 
 }
