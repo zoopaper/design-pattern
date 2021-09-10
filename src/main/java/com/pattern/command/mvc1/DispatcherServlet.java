@@ -20,10 +20,12 @@ import java.util.Map;
  */
 public class DispatcherServlet extends AbstractBaseServlet {
     private List<Command> commandList;//无用
+
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
     }
+
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestContext request = null;
@@ -37,12 +39,14 @@ public class DispatcherServlet extends AbstractBaseServlet {
             e.printStackTrace();
         }
     }
+
     private void processCommand(RequestContext request, ResponseContext response, Map context, String moduleClass) throws Exception {
         Writer out = new BufferedWriter(new OutputStreamWriter(response.getOutputStream(), "UTF-8"));
         Command c = this.retrieveCommand(moduleClass);
         String template = c.process(request, response, context);
         out.flush();
     }
+
     private Command retrieveCommand(String actionClazz) throws Exception {
         return (Command) Class.forName(actionClazz).newInstance();
     }

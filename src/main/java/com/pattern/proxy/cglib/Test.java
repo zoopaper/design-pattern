@@ -6,13 +6,13 @@ package com.pattern.proxy.cglib;
  */
 public class Test {
 
-	public static void main(String[] args) {
-		
-		DaoFacadeProxy proxy = new DaoFacadeProxy();
-		
-		DaoFacadeImpl dao = (DaoFacadeImpl) proxy.getInstance(new DaoFacadeImpl());
+    public static void main(String[] args) {
 
-		dao.execute();
-	}
+        DaoFacadeProxy proxy = new DaoFacadeProxy();
+
+        DaoFacadeImpl dao = (DaoFacadeImpl) proxy.getInstance(new DaoFacadeImpl());
+
+        dao.execute();
+    }
 
 }

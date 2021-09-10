@@ -5,16 +5,16 @@ package com.pattern.flyweight;
  * @date 2015年1月26日
  */
 public class FinancialReportManager implements IReportManager {
-	private String tenantId;
+    private String tenantId;
 
-	public FinancialReportManager(String tenantId) {
-		this.tenantId = tenantId;
-	}
+    public FinancialReportManager(String tenantId) {
+        this.tenantId = tenantId;
+    }
 
-	public String createReport() {
+    public String createReport() {
 
-		return "this is a finanical report";
+        return "this is a finanical report";
 
-	}
+    }
 
 }

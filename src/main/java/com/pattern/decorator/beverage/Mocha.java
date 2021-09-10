@@ -2,8 +2,7 @@ package com.pattern.decorator.beverage;
 
 /**
  * 摩卡装饰者
- * User: krisjin
- * Date: 16-7-26
+ * <p>
  * Time: 上午6:40
  */
 public class Mocha extends CondimentDecorator {

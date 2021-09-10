@@ -2,8 +2,7 @@ package com.pattern.decorator.beverage;
 
 /**
  * 浓缩咖啡
- * User: krisjin
- * Date: 16-7-26
+ * <p>
  * Time: 上午6:33
  */
 public class Espresso extends Beverage {

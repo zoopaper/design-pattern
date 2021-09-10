@@ -6,6 +6,6 @@ package com.pattern.builder;
  */
 public interface TemplateHandler {
 
-	public String process(Template ctx, String tempalteHtml);
-	
+    public String process(Template ctx, String tempalteHtml);
+
 }

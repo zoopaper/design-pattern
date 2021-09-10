@@ -12,11 +12,13 @@ import java.io.IOException;
  */
 public class DispatcherServlet extends AbstractBaseServlet {
     HandlerCommand handlerCommand;
+
     public DispatcherServlet() {
 //        initConfig();
         initHandler();
         handlerCommand = new SimpleUrlHandlerCommand();
     }
+
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
@@ -26,9 +28,11 @@ public class DispatcherServlet extends AbstractBaseServlet {
             e.printStackTrace();
         }
     }
+
     protected HandlerExecutionChain getHandler(HttpServletRequest request) throws Exception {
         return handlerCommand.getHandler(request);
     }
+
     private void process(Object handler, HttpServletRequest req, HttpServletResponse resp) {
     }
 }

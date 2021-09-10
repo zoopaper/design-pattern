@@ -5,7 +5,7 @@ package com.pattern.proxy.cglib;
  * @date 2015-1-26
  */
 public interface DaoFacade {
-	
-	public void execute();
-	
+
+    public void execute();
+
 }

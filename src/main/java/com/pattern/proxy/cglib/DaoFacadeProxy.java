@@ -1,10 +1,10 @@
 package com.pattern.proxy.cglib;
 
-import java.lang.reflect.Method;
-
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
+
+import java.lang.reflect.Method;
 
 /**
  * @author krisjin
@@ -12,26 +12,26 @@ import net.sf.cglib.proxy.MethodProxy;
  */
 public class DaoFacadeProxy implements MethodInterceptor {
 
-	private Object target;
+    private Object target;
 
-	public Object getInstance(Object target) {
-		
-		this.target = target;
+    public Object getInstance(Object target) {
 
-		Enhancer enhancer = new Enhancer();
+        this.target = target;
 
-		enhancer.setSuperclass(this.target.getClass());
+        Enhancer enhancer = new Enhancer();
 
-		enhancer.setCallback(this);
+        enhancer.setSuperclass(this.target.getClass());
 
-		return enhancer.create();
-	}
+        enhancer.setCallback(this);
 
-	public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
+        return enhancer.create();
+    }
 
-		proxy.invokeSuper(obj, args);
+    public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
 
-		return null;
-	}
+        proxy.invokeSuper(obj, args);
+
+        return null;
+    }
 
 }

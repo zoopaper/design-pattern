@@ -9,9 +9,9 @@ import java.lang.reflect.Method;
  */
 public class MapperProxy implements InvocationHandler {
 
-	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 
-		return "hello news";
-	}
+        return "hello news";
+    }
 
 }

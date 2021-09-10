@@ -6,14 +6,14 @@ package com.pattern.flyweight;
  */
 public class EmployeeReportManager implements IReportManager {
 
-	protected String tenantId;
+    protected String tenantId;
 
-	public EmployeeReportManager(String tenantId) {
-		this.tenantId = tenantId;
-	}
+    public EmployeeReportManager(String tenantId) {
+        this.tenantId = tenantId;
+    }
 
-	public String createReport() {
-		return "this is a employee report";
-	}
+    public String createReport() {
+        return "this is a employee report";
+    }
 
 }

@@ -18,6 +18,7 @@ public class BookBuilder {
         this.publish = builder.publish;
         this.introduction = builder.introduction;
     }
+
     //构建器，
     public static class Builder {
         private String title;

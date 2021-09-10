@@ -1,41 +1,41 @@
 /*
  * Copyright (c) JForum Team
  * All rights reserved.
- * 
- * Redistribution and use in source and binary forms, 
- * with or without modification, are permitted provided 
+ *
+ * Redistribution and use in source and binary forms,
+ * with or without modification, are permitted provided
  * that the following conditions are met:
- * 
- * 1) Redistributions of source code must retain the above 
- * copyright notice, this list of conditions and the 
+ *
+ * 1) Redistributions of source code must retain the above
+ * copyright notice, this list of conditions and the
  * following  disclaimer.
- * 2)  Redistributions in binary form must reproduce the 
- * above copyright notice, this list of conditions and 
- * the following disclaimer in the documentation and/or 
+ * 2)  Redistributions in binary form must reproduce the
+ * above copyright notice, this list of conditions and
+ * the following disclaimer in the documentation and/or
  * other materials provided with the distribution.
- * 3) Neither the name of "Rafael Steil" nor 
- * the names of its contributors may be used to endorse 
- * or promote products derived from this software without 
+ * 3) Neither the name of "Rafael Steil" nor
+ * the names of its contributors may be used to endorse
+ * or promote products derived from this software without
  * specific prior written permission.
- * 
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT 
- * HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
- * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, 
- * BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
- * MERCHANTABILITY AND FITNESS FOR A PARTICULAR 
- * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL 
- * THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE 
- * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, 
- * EXEMPLARY, OR CONSEQUENTIAL DAMAGES 
- * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
- * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
- * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER 
- * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER 
- * IN CONTRACT, STRICT LIABILITY, OR TORT 
- * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN 
- * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF 
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT
+ * HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING,
+ * BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
+ * THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
+ * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+ * IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
- * 
+ *
  * This file creation date: Mar 16, 2003 / 1:31:30 AM
  * The JForum Project
  * http://www.jforum.net
@@ -182,7 +182,7 @@ public class WebRequestContext extends HttpServletRequestWrapper implements Requ
      * @throws UnsupportedEncodingException
      */
     private void handleMultipart(HttpServletRequest superRequest, String encoding) throws UnsupportedEncodingException {
-        String tmpPath =null;
+        String tmpPath = null;
 
         File tmpDir = new File(tmpPath);
         boolean success = false;
@@ -197,7 +197,8 @@ public class WebRequestContext extends HttpServletRequestWrapper implements Requ
             // creation failed for some reason - a SecurityException
             // or something else. We don't care about it, as the
             // code below tries to use java.io.tmpdir
-        }}
+        }
+    }
 
 //        if (!success) {
 //            tmpPath = System.getProperty("java.io.tmpdir");
@@ -231,9 +232,9 @@ public class WebRequestContext extends HttpServletRequestWrapper implements Requ
 //		}
 //        }
 
-            /**
-             * @see javax.servlet.ServletRequestWrapper#getParameterValues(String)
-             */
+    /**
+     * @see javax.servlet.ServletRequestWrapper#getParameterValues(String)
+     */
 //        public String[] getParameterValues (String name)
 //        {
 //            Object value = this.getObjectParameter(name);
@@ -248,210 +249,209 @@ public class WebRequestContext extends HttpServletRequestWrapper implements Requ
 //                    ? super.getParameterValues(name)
 //                    : (String[]) l.toArray(new String[0]);
 //        }
+    private String extractRequestUri(String requestUri, String contextPath) {
+        // First, remove the context path from the requestUri,
+        // so we can work only with the important stuff
+        if (contextPath != null && contextPath.length() > 0) {
+            requestUri = requestUri.substring(contextPath.length(), requestUri.length());
+        }
 
-        private String extractRequestUri (String requestUri, String contextPath){
-            // First, remove the context path from the requestUri,
-            // so we can work only with the important stuff
-            if (contextPath != null && contextPath.length() > 0) {
-                requestUri = requestUri.substring(contextPath.length(), requestUri.length());
+        // Remove the "jsessionid" (or similar) from the URI
+        // Probably this is not the right way to go, since we're
+        // discarding the value...
+        int index = requestUri.indexOf(';');
+
+        if (index > -1) {
+            int lastIndex = requestUri.indexOf('?', index);
+
+            if (lastIndex == -1) {
+                lastIndex = requestUri.indexOf('&', index);
             }
 
-            // Remove the "jsessionid" (or similar) from the URI
-            // Probably this is not the right way to go, since we're
-            // discarding the value...
-            int index = requestUri.indexOf(';');
-
-            if (index > -1) {
-                int lastIndex = requestUri.indexOf('?', index);
-
-                if (lastIndex == -1) {
-                    lastIndex = requestUri.indexOf('&', index);
-                }
-
-                if (lastIndex == -1) {
-                    requestUri = requestUri.substring(0, index);
-                } else {
-                    String part1 = requestUri.substring(0, index);
-                    requestUri = part1 + requestUri.substring(lastIndex);
-                }
-            }
-
-            return requestUri;
-        }
-
-        /**
-         * @see javax.servlet.ServletRequest#getParameter(String)
-         */
-        public String getParameter (String parameter){
-            return (String) this.query.get(parameter);
-        }
-
-        /**
-         * Gets an parameter that is a number.
-         * A call to <code>Integer#parseInt(String)</code> is made
-         * to do the conversion
-         *
-         * @param parameter The parameter name to get the value
-         * @return int
-         */
-        public int getIntParameter (String parameter){
-            return Integer.parseInt(this.getParameter(parameter));
-        }
-
-        /**
-         * Gets some request parameter as <code>Object</code>.
-         * This method may be used when you have to get some value
-         * of a <i>multipart/form-data</i> request, like a image
-         * of file. <br>
-         *
-         * @param parameter String
-         * @return Object
-         */
-        public Object getObjectParameter (String parameter){
-            return this.query.get(parameter);
-        }
-
-        public void addParameter (String name, Object value){
-            if (!this.query.containsKey(name)) {
-                this.query.put(name, value);
+            if (lastIndex == -1) {
+                requestUri = requestUri.substring(0, index);
             } else {
-                Object currentValue = this.getObjectParameter(name);
-                List l;
-
-                if (!(currentValue instanceof List)) {
-                    l = new ArrayList();
-                    l.add(currentValue);
-                } else {
-                    l = (List) currentValue;
-                }
-
-                l.add(value);
-                this.query.put(name, l);
+                String part1 = requestUri.substring(0, index);
+                requestUri = part1 + requestUri.substring(lastIndex);
             }
         }
 
-        public void addOrReplaceParameter (String name, Object value){
+        return requestUri;
+    }
+
+    /**
+     * @see javax.servlet.ServletRequest#getParameter(String)
+     */
+    public String getParameter(String parameter) {
+        return (String) this.query.get(parameter);
+    }
+
+    /**
+     * Gets an parameter that is a number.
+     * A call to <code>Integer#parseInt(String)</code> is made
+     * to do the conversion
+     *
+     * @param parameter The parameter name to get the value
+     * @return int
+     */
+    public int getIntParameter(String parameter) {
+        return Integer.parseInt(this.getParameter(parameter));
+    }
+
+    /**
+     * Gets some request parameter as <code>Object</code>.
+     * This method may be used when you have to get some value
+     * of a <i>multipart/form-data</i> request, like a image
+     * of file. <br>
+     *
+     * @param parameter String
+     * @return Object
+     */
+    public Object getObjectParameter(String parameter) {
+        return this.query.get(parameter);
+    }
+
+    public void addParameter(String name, Object value) {
+        if (!this.query.containsKey(name)) {
             this.query.put(name, value);
-        }
+        } else {
+            Object currentValue = this.getObjectParameter(name);
+            List l;
 
-        /**
-         * Gets the <i>action</i> of the current request.
-         * <p/>
-         * An <i>Action</i> is the parameter name which specifies
-         * what next action should be done by the system. It may be
-         * add or edit a post, editing the groups, whatever. In the URL, the
-         * Action can the represented in two forms:
-         * <p/>
-         * <blockquote>
-         * <code>
-         * http://www.host.com/webapp/servletName?module=groups&action=list
-         * </code>
-         * </blockquote>
-         * <p/>
-         * or
-         * <p/>
-         * <blockquote>
-         * <code>
-         * http://www.host.com/webapp/servletName/groups/list
-         * </code>
-         * </blockquote>
-         * <p/>
-         * In both situations, the action's name is "list".
-         *
-         * @return String representing the action name
-         */
-        public String getAction () {
-            return this.getParameter("action");
-        }
-
-        public void changeAction (String newAction){
-            if (this.query.containsKey("action")) {
-                this.query.remove("action");
-                this.query.put("action", newAction);
+            if (!(currentValue instanceof List)) {
+                l = new ArrayList();
+                l.add(currentValue);
             } else {
-                this.addParameter("action", newAction);
-            }
-        }
-
-        /**
-         * Gets the <i>module</i> of the current request.
-         * <p/>
-         * A <i>Module</i> is the parameter name which specifies
-         * what module the user is requesting. It may be the group
-         * administration, the topics or anything else configured module.
-         * In the URL, the Module can the represented in two forms:
-         * <p/>
-         * <blockquote>
-         * <code>
-         * http://www.host.com/webapp/servletName?module=groups&action=list
-         * </code>
-         * </blockquote>
-         * <p/>
-         * or
-         * <p/>
-         * <blockquote>
-         * <code>
-         * http://www.host.com/webapp/servletName/groups/list
-         * </code>
-         * </blockquote>
-         * <p/>
-         * In both situations, the module's name is "groups".
-         *
-         * @return String representing the module name
-         */
-        public String getModule () {
-            return this.getParameter("module");
-        }
-
-        public Object getObjectRequestParameter (String parameter){
-            return this.query.get(parameter);
-        }
-
-        /**
-         * @see HttpServletRequestWrapper#getContextPath()
-         */
-        public String getContextPath () {
-            String contextPath = super.getContextPath();
-            String proxiedContextPath = null;
-
-//		if (!StringUtils.isEmpty(proxiedContextPath)) {
-            contextPath = proxiedContextPath;
-//		}
-
-            return contextPath;
-        }
-
-        /**
-         * @see javax.servlet.ServletRequestWrapper#getRemoteAddr()
-         */
-        public String getRemoteAddr () {
-            // We look if the request is forwarded
-            // If it is not call the older function.
-            String ip = super.getHeader("x-forwarded-for");
-
-            if (ip == null) {
-                ip = super.getRemoteAddr();
-            } else {
-                // Process the IP to keep the last IP (real ip of the computer on the net)
-                StringTokenizer tokenizer = new StringTokenizer(ip, ",");
-
-                // Ignore all tokens, except the last one
-                for (int i = 0; i < tokenizer.countTokens() - 1; i++) {
-                    tokenizer.nextElement();
-                }
-
-                ip = tokenizer.nextToken().trim();
-
-                if (ip.equals("")) {
-                    ip = null;
-                }
+                l = (List) currentValue;
             }
 
-            // If the ip is still null, we put 0.0.0.0 to avoid null values
-            if (ip == null) {
-                ip = "0.0.0.0";
-            }
-
-            return ip;
+            l.add(value);
+            this.query.put(name, l);
         }
     }
+
+    public void addOrReplaceParameter(String name, Object value) {
+        this.query.put(name, value);
+    }
+
+    /**
+     * Gets the <i>action</i> of the current request.
+     * <p/>
+     * An <i>Action</i> is the parameter name which specifies
+     * what next action should be done by the system. It may be
+     * add or edit a post, editing the groups, whatever. In the URL, the
+     * Action can the represented in two forms:
+     * <p/>
+     * <blockquote>
+     * <code>
+     * http://www.host.com/webapp/servletName?module=groups&action=list
+     * </code>
+     * </blockquote>
+     * <p/>
+     * or
+     * <p/>
+     * <blockquote>
+     * <code>
+     * http://www.host.com/webapp/servletName/groups/list
+     * </code>
+     * </blockquote>
+     * <p/>
+     * In both situations, the action's name is "list".
+     *
+     * @return String representing the action name
+     */
+    public String getAction() {
+        return this.getParameter("action");
+    }
+
+    public void changeAction(String newAction) {
+        if (this.query.containsKey("action")) {
+            this.query.remove("action");
+            this.query.put("action", newAction);
+        } else {
+            this.addParameter("action", newAction);
+        }
+    }
+
+    /**
+     * Gets the <i>module</i> of the current request.
+     * <p/>
+     * A <i>Module</i> is the parameter name which specifies
+     * what module the user is requesting. It may be the group
+     * administration, the topics or anything else configured module.
+     * In the URL, the Module can the represented in two forms:
+     * <p/>
+     * <blockquote>
+     * <code>
+     * http://www.host.com/webapp/servletName?module=groups&action=list
+     * </code>
+     * </blockquote>
+     * <p/>
+     * or
+     * <p/>
+     * <blockquote>
+     * <code>
+     * http://www.host.com/webapp/servletName/groups/list
+     * </code>
+     * </blockquote>
+     * <p/>
+     * In both situations, the module's name is "groups".
+     *
+     * @return String representing the module name
+     */
+    public String getModule() {
+        return this.getParameter("module");
+    }
+
+    public Object getObjectRequestParameter(String parameter) {
+        return this.query.get(parameter);
+    }
+
+    /**
+     * @see HttpServletRequestWrapper#getContextPath()
+     */
+    public String getContextPath() {
+        String contextPath = super.getContextPath();
+        String proxiedContextPath = null;
+
+//		if (!StringUtils.isEmpty(proxiedContextPath)) {
+        contextPath = proxiedContextPath;
+//		}
+
+        return contextPath;
+    }
+
+    /**
+     * @see javax.servlet.ServletRequestWrapper#getRemoteAddr()
+     */
+    public String getRemoteAddr() {
+        // We look if the request is forwarded
+        // If it is not call the older function.
+        String ip = super.getHeader("x-forwarded-for");
+
+        if (ip == null) {
+            ip = super.getRemoteAddr();
+        } else {
+            // Process the IP to keep the last IP (real ip of the computer on the net)
+            StringTokenizer tokenizer = new StringTokenizer(ip, ",");
+
+            // Ignore all tokens, except the last one
+            for (int i = 0; i < tokenizer.countTokens() - 1; i++) {
+                tokenizer.nextElement();
+            }
+
+            ip = tokenizer.nextToken().trim();
+
+            if (ip.equals("")) {
+                ip = null;
+            }
+        }
+
+        // If the ip is still null, we put 0.0.0.0 to avoid null values
+        if (ip == null) {
+            ip = "0.0.0.0";
+        }
+
+        return ip;
+    }
+}

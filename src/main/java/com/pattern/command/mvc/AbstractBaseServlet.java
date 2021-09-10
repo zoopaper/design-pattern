@@ -16,7 +16,7 @@ public abstract class AbstractBaseServlet extends HttpServlet {
 
     @Override
     public void init(ServletConfig config) throws ServletException {
-            
+
     }
 
     public void initHandler() {

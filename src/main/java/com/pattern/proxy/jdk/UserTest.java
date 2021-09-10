@@ -4,16 +4,16 @@ import java.lang.reflect.Proxy;
 
 public class UserTest {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		AirProduct europe = new EuropeAirPurifier();
+        AirProduct europe = new EuropeAirPurifier();
 
-		NorthProxy proxy = new NorthProxy(europe);
+        NorthProxy proxy = new NorthProxy(europe);
 
-		AirProduct ap = (AirProduct) Proxy.newProxyInstance(europe.getClass().getClassLoader(), europe.getClass().getInterfaces(), proxy);
+        AirProduct ap = (AirProduct) Proxy.newProxyInstance(europe.getClass().getClassLoader(), europe.getClass().getInterfaces(), proxy);
 
-		String ret = ap.sell();
-		
-		System.out.println(ret);
-	}
+        String ret = ap.sell();
+
+        System.out.println(ret);
+    }
 }

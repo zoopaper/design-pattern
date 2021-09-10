@@ -6,6 +6,6 @@ package com.pattern.proxy.jdk.mybatis;
  */
 public interface NewsMapper {
 
-	public String getNews(long id);
+    public String getNews(long id);
 
 }
