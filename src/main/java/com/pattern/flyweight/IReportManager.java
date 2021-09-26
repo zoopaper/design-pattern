@@ -6,6 +6,6 @@ package com.pattern.flyweight;
  */
 public interface IReportManager {
 
-    public String createReport();
+    String createReport();
 
 }
