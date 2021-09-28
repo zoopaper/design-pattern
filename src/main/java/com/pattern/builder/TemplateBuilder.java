@@ -6,12 +6,12 @@ package com.pattern.builder;
  */
 public interface TemplateBuilder {
 
-    public String templateHtml = "";
+    String templateHtml = "";
 
-    public TemplateBuilder title();
+    TemplateBuilder title();
 
-    public TemplateBuilder summary();
+    TemplateBuilder summary();
 
-    public TemplateBuilder context();
+    TemplateBuilder context();
 
 }

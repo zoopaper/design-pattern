@@ -19,7 +19,7 @@ public class SerializeSingleton implements Serializable {
     }
 
     /**
-     * 此方法在反序列化前被执行
+     * 此方法在反序列化前被执行，阻止生成新的实例，总是返回当前对象
      *
      * @return
      */
