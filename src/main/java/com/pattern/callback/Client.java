@@ -3,14 +3,9 @@ package com.pattern.callback;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
- * <p/>
- * User : krisibm@163.com
- * Date: 2015/10/28
- * Time: 17:46
- */
 public class Client implements Callback {
-    ExecutorService executorService = Executors.newCachedThreadPool();
+
+    private ExecutorService executorService = Executors.newCachedThreadPool();
 
     private Server server;
 
@@ -30,7 +25,6 @@ public class Client implements Callback {
 
         System.out.println("客户端异步发送成功!");
         executorService.shutdown();
-
     }
 
 

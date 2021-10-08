@@ -1,7 +1,5 @@
 package com.pattern.callback;
 
-/**
- */
 public class Server {
 
     public void receive(Callback callback, String msg) {
