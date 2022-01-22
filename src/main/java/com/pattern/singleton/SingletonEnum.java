@@ -1,8 +1,8 @@
 package com.pattern.singleton;
 
 /**
- * User: krisjin
- * Date: 2016/4/30
+ * @date 2021-12-16 19:42
+ * @author krisjin
  */
 public enum SingletonEnum {
     INSTANCE;
