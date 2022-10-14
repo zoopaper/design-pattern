@@ -1,4 +1,4 @@
-package com.pattern.factorymethod.pizza;
+package com.pattern.factory.demo2;
 
 /**
  * 纽约风味芝士披萨

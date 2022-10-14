@@ -14,7 +14,7 @@ import java.util.Map;
  * Date: 2015/8/25
  * Time: 9:57
  */
-public class TemplateMethodTest {
+public class TemplateMethodMain {
 
     @Test
     public void test() {

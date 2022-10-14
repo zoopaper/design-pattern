@@ -7,7 +7,7 @@ import org.junit.Test;
  * User: krisjin
  * Date: 2016/4/30
  */
-public class LazyLoadHolderSingletonEnumTest {
+public class LazyLoadHolderSingletonEnumMain {
 
     @Test
     public void test() {

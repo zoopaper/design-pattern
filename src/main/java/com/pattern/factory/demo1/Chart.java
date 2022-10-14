@@ -1,4 +1,4 @@
-package com.pattern.factorymethod;
+package com.pattern.factory.demo1;
 
 /**
  * 舆情图接口
@@ -7,6 +7,6 @@ package com.pattern.factorymethod;
  */
 public interface Chart {
 
-    public void generate();
+    void generate();
 
 }

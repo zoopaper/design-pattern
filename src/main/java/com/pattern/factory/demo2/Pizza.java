@@ -1,4 +1,4 @@
-package com.pattern.factorymethod.pizza;
+package com.pattern.factory.demo2;
 
 import java.util.ArrayList;
 import java.util.List;

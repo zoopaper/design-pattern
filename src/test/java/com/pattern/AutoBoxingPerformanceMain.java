@@ -7,7 +7,7 @@ import org.junit.Test;
  * User: krisjin
  * Date: 2016/5/1
  */
-public class AutoBoxingPerformanceTest {
+public class AutoBoxingPerformanceMain {
 
     @Test
     public void test() {

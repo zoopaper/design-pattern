@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
  * User: krisjin
  * Date: 2016/9/19
  */
-public class JavassistTest {
+public class JavassistMain {
     @Test
     public void testNewInstance() throws Exception {
         ClassPool pool = ClassPool.getDefault();

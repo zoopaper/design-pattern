@@ -1,4 +1,4 @@
-package com.pattern.factorymethod;
+package com.pattern.factory.demo1;
 
 /**
  * 媒体舆情图工厂
@@ -6,7 +6,6 @@ package com.pattern.factorymethod;
  * @author krisjin
  */
 public class MediaChartFactory implements ChartFactory {
-
 
     @Override
     public Chart createChart(ChartEnum chartEnum) {

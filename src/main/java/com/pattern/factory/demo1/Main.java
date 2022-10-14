@@ -1,5 +1,10 @@
-package com.pattern.factorymethod;
+package com.pattern.factory.demo1;
 
+
+import com.pattern.factory.demo1.Chart;
+import com.pattern.factory.demo1.ChartEnum;
+import com.pattern.factory.demo1.ChartFactory;
+import com.pattern.factory.demo1.MediaChartFactory;
 
 /**
  * @author kris

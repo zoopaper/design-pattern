@@ -1,4 +1,4 @@
-package com.pattern.factorymethod;
+package com.pattern.factory.demo1;
 
 /**
  * User: krisjin

@@ -2,11 +2,14 @@ package com.pattern;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * User: krisjin
  * Date: 2016/4/30
  */
-public class HouseSingetonTest {
+public class HouseSingletonMain {
 
     @Test
     public void test() {
@@ -19,5 +22,13 @@ public class HouseSingetonTest {
         } else {
             System.out.print(false);
         }
+    }
+
+    @Test
+    public void dd(){
+        List l= new ArrayList<>();
+        l.add("11");
+        l.add("12");
+        System.err.println(l);
     }
 }
