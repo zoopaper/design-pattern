@@ -6,11 +6,11 @@ package com.pattern.state;
  */
 public interface State {
 
-    public void insertQuarter();
+    void insertQuarter();
 
-    public void ejectQuarter();
+    void ejectQuarter();
 
-    public void turnCrank();
+    void turnCrank();
 
-    public void dispense();
+    void dispense();
 }
