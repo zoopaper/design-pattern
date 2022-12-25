@@ -11,6 +11,6 @@ package com.pattern.adapter.base;
  */
 public interface Target {
 
-    public void pull();
+    void pull();
 
 }
